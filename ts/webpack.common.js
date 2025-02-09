@@ -1,11 +1,15 @@
 import ESLintPlugin from "eslint-webpack-plugin";
 
-import { resolve as _resolve } from "path";
+import { resolve as _resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 export const devtool = "source-map";
 export const entry = {
-    index: "./src/code/forms/index.ts",
+    form: "./src/code/forms/index.ts",
+    ribbon: "./src/code/ribbon/index.ts",
 };
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 export const output = {
     filename: "[name].js",
     sourceMapFilename: "maps/[name].js.map",
@@ -33,4 +37,13 @@ export const plugins = [
 ];
 export const resolve = {
     extensions: [".ts", ".js"],
+};
+
+export default {
+    devtool,
+    entry,
+    output,
+    module,
+    plugins,
+    resolve,
 };
