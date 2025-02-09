@@ -1,22 +1,16 @@
-module.exports = {
-  env: {
+export const env = {
     browser: true,
     commonjs: true,
     es6: true,
-  },
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:prettier/recommended",
-  ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
+};
+export const extendsConfig = ["plugin:@typescript-eslint/recommended", "prettier", "plugin:prettier/recommended"];
+export const parser = "@typescript-eslint/parser";
+export const parserOptions = {
     project: "./tsconfig.json",
     sourceType: "module",
-  },
-  plugins: ["@typescript-eslint", "prettier"],
-  rules: {
+};
+export const plugins = ["@typescript-eslint", "prettier"];
+export const rules = {
     "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "error",
-  },
 };

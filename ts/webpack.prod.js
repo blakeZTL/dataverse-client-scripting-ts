@@ -1,5 +1,5 @@
-const { merge } = require("webpack-merge");
-const commonConfig = require("./webpack.common.js");
-module.exports = merge(commonConfig, {
-  mode: "production",
+import { merge } from "webpack-merge";
+import commonConfig from "./webpack.common.js";
+export default merge(commonConfig, {
+    mode: "production",
 });
